@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OGA.API</name>
+    </assembly>
+    <members>
+        <member name="T:OGA.API.Controllers.RolesController">
+            <summary>
+            Controlador para gestionar roles en el sistema.
+            </summary>
+        </member>
+        <member name="M:OGA.API.Controllers.RolesController.#ctor(Application.Interfaces.IRoleService)">
+            <summary>
+            Constructor del controlador, recibe el servicio de roles.
+            </summary>
+            <param name="roleService">Servicio para manejar roles.</param>
+        </member>
+        <member name="M:OGA.API.Controllers.RolesController.GetAll">
+            <summary>
+            Obtiene todos los roles disponibles.
+            </summary>
+            <returns>Lista de roles.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.RolesController.GetById(System.Int32)">
+            <summary>
+            Obtiene un rol específico por su ID.
+            </summary>
+            <param name="id">Identificador del rol.</param>
+            <returns>El rol encontrado o un error 404 si no existe.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.RolesController.Create(Application.DTOs.RoleDTO)">
+            <summary>
+            Crea un nuevo rol en el sistema.
+            </summary>
+            <param name="roleDto">Datos del rol a crear.</param>
+            <returns>Respuesta 201 Created con la ubicación del nuevo rol.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.RolesController.Update(System.Int32,Application.DTOs.RoleDTO)">
+            <summary>
+            Actualiza un rol existente.
+            </summary>
+            <param name="id">ID del rol a actualizar.</param>
+            <param name="roleDto">Nuevos datos del rol.</param>
+            <returns>Código 204 No Content si la actualización es exitosa.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.RolesController.Delete(System.Int32)">
+            <summary>
+            Elimina un rol por su ID.
+            </summary>
+            <param name="id">ID del rol a eliminar.</param>
+            <returns>Código 204 No Content si la eliminación fue exitosa.</returns>
+        </member>
+        <member name="T:OGA.API.Controllers.TrailersController">
+            <summary>
+            Controlador para la gestión de remolques.
+            </summary>
+        </member>
+        <member name="M:OGA.API.Controllers.TrailersController.#ctor(Application.Interfaces.ITrailerService)">
+            <summary>
+            Constructor que inyecta el servicio de remolques.
+            </summary>
+            <param name="trailerService">Servicio de lógica de negocio para remolques.</param>
+        </member>
+        <member name="M:OGA.API.Controllers.TrailersController.GetAll">
+            <summary>
+            Obtiene la lista de todos los remolques disponibles.
+            </summary>
+            <returns>Lista de remolques.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.TrailersController.GetById(System.Int32)">
+            <summary>
+            Obtiene un remolque específico por su ID.
+            </summary>
+            <param name="id">Identificador del remolque.</param>
+            <returns>El remolque encontrado o un error 404 si no existe.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.TrailersController.Create(Application.DTOs.TrailerDTO)">
+            <summary>
+            Crea un nuevo remolque.
+            </summary>
+            <param name="trailerDto">Datos del remolque a crear.</param>
+            <returns>Respuesta 201 Created con la ubicación del nuevo remolque.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.TrailersController.Update(System.Int32,Application.DTOs.TrailerDTO)">
+            <summary>
+            Actualiza un remolque existente.
+            </summary>
+            <param name="id">ID del remolque a actualizar.</param>
+            <param name="trailerDto">Nuevos datos del remolque.</param>
+            <returns>Código 204 No Content si la actualización es exitosa.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.TrailersController.Delete(System.Int32)">
+            <summary>
+            Elimina un remolque por su ID.
+            </summary>
+            <param name="id">ID del remolque a eliminar.</param>
+            <returns>Código 204 No Content si la eliminación fue exitosa.</returns>
+        </member>
+        <member name="M:OGA.API.Controllers.UsersController.GetAll">
+            <summary>
+            Obtiene todos los usuarios.
+            </summary>
+            <remarks>
+            Este endpoint devuelve una lista de todos los usuarios almacenados en el sistema.
+            </remarks>
+            <returns>Lista de usuarios</returns>
+            <response code="200">Devuelve la lista de usuarios</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UsersController.GetById(System.Int32)">
+            <summary>
+            Obtiene un usuario por su ID.
+            </summary>
+            <param name="id">El ID del usuario a buscar</param>
+            <remarks>
+            Este endpoint devuelve los detalles de un usuario específico por su ID.
+            </remarks>
+            <returns>Detalles del usuario</returns>
+            <response code="200">Devuelve los detalles del usuario</response>
+            <response code="404">Si no se encuentra el usuario con el ID proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UsersController.Create(Application.DTOs.UserDTO)">
+            <summary>
+            Crea un nuevo usuario en el sistema.
+            </summary>
+            <param name="userDto">Datos del nuevo usuario a crear</param>
+            <remarks>
+            Este endpoint permite crear un nuevo usuario proporcionando los datos necesarios.
+            La contraseña se recibe sin encriptar y es hasheada antes de ser almacenada.
+            </remarks>
+            <returns>El usuario creado</returns>
+            <response code="201">Usuario creado exitosamente</response>
+            <response code="400">Datos incorrectos en la solicitud</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UsersController.Login(Application.DTOs.UserDTO)">
+            <summary>
+            Inicia sesión de un usuario.
+            </summary>
+            <param name="userDto">Credenciales del usuario para el login</param>
+            <remarks>
+            Este endpoint valida las credenciales del usuario y genera un token JWT si el login es exitoso.
+            </remarks>
+            <returns>Un token JWT en caso de éxito</returns>
+            <response code="200">Login exitoso, retorna un token JWT</response>
+            <response code="400">Credenciales incorrectas</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UsersController.Update(System.Int32,Application.DTOs.UserDTO)">
+            <summary>
+            Actualiza los datos de un usuario.
+            </summary>
+            <param name="id">El ID del usuario a actualizar</param>
+            <param name="userDto">Los nuevos datos del usuario</param>
+            <remarks>
+            Este endpoint permite actualizar los detalles de un usuario. El ID del usuario en la URL debe coincidir con el ID en los datos del usuario.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Usuario actualizado exitosamente</response>
+            <response code="400">ID de usuario no coincide con el proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Elimina un usuario por su ID.
+            </summary>
+            <param name="id">El ID del usuario a eliminar</param>
+            <remarks>
+            Este endpoint elimina un usuario del sistema utilizando su ID.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Usuario eliminado exitosamente</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UserRolesController.GetAll">
+            <summary>
+            Obtiene todos los roles de usuario.
+            </summary>
+            <remarks>
+            Este endpoint devuelve una lista con todos los roles de usuario almacenados en el sistema.
+            </remarks>
+            <returns>Lista de roles de usuario</returns>
+            <response code="200">Devuelve la lista de roles de usuario</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UserRolesController.Create(Application.DTOs.UserRoleDTO)">
+            <summary>
+            Crea un nuevo rol de usuario.
+            </summary>
+            <param name="userRoleDto">Datos del nuevo rol de usuario a crear</param>
+            <remarks>
+            Este endpoint permite crear un nuevo rol de usuario proporcionando los datos necesarios.
+            </remarks>
+            <returns>El rol de usuario creado</returns>
+            <response code="200">Rol de usuario creado exitosamente</response>
+            <response code="400">Datos incorrectos en la solicitud</response>
+        </member>
+        <member name="M:OGA.API.Controllers.UserRolesController.Delete(Application.DTOs.UserRoleDTO)">
+            <summary>
+            Elimina un rol de usuario.
+            </summary>
+            <param name="userRoleDto">Datos del rol de usuario a eliminar</param>
+            <remarks>
+            Este endpoint elimina un rol de usuario proporcionando los detalles del rol que se desea eliminar.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Rol de usuario eliminado exitosamente</response>
+            <response code="400">Datos incorrectos en la solicitud</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesController.GetAll">
+            <summary>
+            Obtiene todos los vehículos.
+            </summary>
+            <remarks>
+            Este endpoint devuelve una lista de todos los vehículos almacenados en el sistema.
+            </remarks>
+            <returns>Lista de vehículos</returns>
+            <response code="200">Devuelve la lista de vehículos</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesController.GetById(System.Int32)">
+            <summary>
+            Obtiene un vehículo por su ID.
+            </summary>
+            <param name="id">El ID del vehículo a buscar</param>
+            <remarks>
+            Este endpoint devuelve los detalles de un vehículo específico por su ID.
+            </remarks>
+            <returns>Detalles del vehículo</returns>
+            <response code="200">Devuelve los detalles del vehículo</response>
+            <response code="404">Si no se encuentra el vehículo con el ID proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesController.Create(Application.DTOs.VehicleDTO)">
+            <summary>
+            Crea un nuevo vehículo.
+            </summary>
+            <param name="vehicleDto">Datos del nuevo vehículo a crear</param>
+            <remarks>
+            Este endpoint permite crear un nuevo vehículo proporcionando los datos necesarios.
+            </remarks>
+            <returns>El vehículo creado</returns>
+            <response code="201">Vehículo creado exitosamente</response>
+            <response code="400">Datos incorrectos en la solicitud</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesController.Update(System.Int32,Application.DTOs.VehicleDTO)">
+            <summary>
+            Actualiza un vehículo existente.
+            </summary>
+            <param name="id">El ID del vehículo a actualizar</param>
+            <param name="vehicleDto">Los nuevos datos del vehículo</param>
+            <remarks>
+            Este endpoint permite actualizar los detalles de un vehículo existente. El ID del vehículo en la URL debe coincidir con el ID en los datos del vehículo.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Vehículo actualizado exitosamente</response>
+            <response code="400">ID de vehículo no coincide con el proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesController.Delete(System.Int32)">
+            <summary>
+            Elimina un vehículo por su ID.
+            </summary>
+            <param name="id">El ID del vehículo a eliminar</param>
+            <remarks>
+            Este endpoint elimina un vehículo del sistema utilizando su ID.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Vehículo eliminado exitosamente</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTrailerController.GetAll">
+            <summary>
+            Obtiene todos los remolques de vehículos.
+            </summary>
+            <remarks>
+            Este endpoint devuelve una lista de todos los remolques de vehículos almacenados en el sistema.
+            </remarks>
+            <returns>Lista de remolques de vehículos</returns>
+            <response code="200">Devuelve la lista de remolques de vehículos</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTrailerController.GetById(System.Int32)">
+            <summary>
+            Obtiene un remolque de vehículo por su ID.
+            </summary>
+            <param name="id">El ID del remolque de vehículo a buscar</param>
+            <remarks>
+            Este endpoint devuelve los detalles de un remolque de vehículo específico por su ID.
+            </remarks>
+            <returns>Detalles del remolque de vehículo</returns>
+            <response code="200">Devuelve los detalles del remolque de vehículo</response>
+            <response code="404">Si no se encuentra el remolque con el ID proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTrailerController.Create(Application.DTOs.VehicleTrailerDTO)">
+            <summary>
+            Crea un nuevo remolque de vehículo.
+            </summary>
+            <param name="vehicleTrailerDto">Datos del nuevo remolque de vehículo a crear</param>
+            <remarks>
+            Este endpoint permite crear un nuevo remolque de vehículo proporcionando los datos necesarios.
+            </remarks>
+            <returns>El remolque de vehículo creado</returns>
+            <response code="201">Remolque de vehículo creado exitosamente</response>
+            <response code="400">Datos incorrectos en la solicitud</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTrailerController.Update(Application.DTOs.VehicleTrailerDTO)">
+            <summary>
+            Actualiza un remolque de vehículo existente.
+            </summary>
+            <param name="vehicleTrailerDto">Los nuevos datos del remolque de vehículo</param>
+            <remarks>
+            Este endpoint permite actualizar los detalles de un remolque de vehículo existente.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Remolque de vehículo actualizado exitosamente</response>
+            <response code="400">Datos incorrectos o errores al intentar actualizar el remolque</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTrailerController.Delete(System.Int32)">
+            <summary>
+            Elimina un remolque de vehículo por su ID.
+            </summary>
+            <param name="id">El ID del remolque de vehículo a eliminar</param>
+            <remarks>
+            Este endpoint elimina un remolque de vehículo del sistema utilizando su ID.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Remolque de vehículo eliminado exitosamente</response>
+            <response code="404">Si no se encuentra el remolque con el ID proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTypeController.GetAll">
+            <summary>
+            Obtiene todos los tipos de vehículos.
+            </summary>
+            <remarks>
+            Este endpoint devuelve una lista de todos los tipos de vehículos almacenados en el sistema.
+            </remarks>
+            <returns>Lista de tipos de vehículos</returns>
+            <response code="200">Devuelve la lista de tipos de vehículos</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTypeController.GetById(System.Int32)">
+            <summary>
+            Obtiene un tipo de vehículo por su ID.
+            </summary>
+            <param name="id">El ID del tipo de vehículo a buscar</param>
+            <remarks>
+            Este endpoint devuelve los detalles de un tipo de vehículo específico por su ID.
+            </remarks>
+            <returns>Detalles del tipo de vehículo</returns>
+            <response code="200">Devuelve los detalles del tipo de vehículo</response>
+            <response code="404">Si no se encuentra el tipo de vehículo con el ID proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTypeController.Create(Application.DTOs.VehicleTypeDTO)">
+            <summary>
+            Crea un nuevo tipo de vehículo.
+            </summary>
+            <param name="vehicleTypeDto">Datos del nuevo tipo de vehículo a crear</param>
+            <remarks>
+            Este endpoint permite crear un nuevo tipo de vehículo proporcionando los datos necesarios.
+            </remarks>
+            <returns>El tipo de vehículo creado</returns>
+            <response code="201">Tipo de vehículo creado exitosamente</response>
+            <response code="400">Datos incorrectos en la solicitud</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTypeController.Update(System.Int32,Application.DTOs.VehicleTypeDTO)">
+            <summary>
+            Actualiza un tipo de vehículo existente.
+            </summary>
+            <param name="id">El ID del tipo de vehículo a actualizar</param>
+            <param name="vehicleTypeDto">Los nuevos datos del tipo de vehículo</param>
+            <remarks>
+            Este endpoint permite actualizar los detalles de un tipo de vehículo existente. El ID del tipo de vehículo en la URL debe coincidir con el ID en los datos del tipo de vehículo.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Tipo de vehículo actualizado exitosamente</response>
+            <response code="400">ID de tipo de vehículo no coincide con el proporcionado</response>
+        </member>
+        <member name="M:OGA.API.Controllers.VehiclesTypeController.Delete(System.Int32)">
+            <summary>
+            Elimina un tipo de vehículo por su ID.
+            </summary>
+            <param name="id">El ID del tipo de vehículo a eliminar</param>
+            <remarks>
+            Este endpoint elimina un tipo de vehículo del sistema utilizando su ID.
+            </remarks>
+            <returns>Resultado de la operación</returns>
+            <response code="204">Tipo de vehículo eliminado exitosamente</response>
+            <response code="404">Si no se encuentra el tipo de vehículo con el ID proporcionado</response>
+        </member>
+    </members>
+</doc>

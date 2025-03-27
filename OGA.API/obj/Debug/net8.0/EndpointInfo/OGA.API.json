@@ -1,0 +1,1466 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "OGA API",
+    "description": "API para gestión de vehículos y remolques",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Roles": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Obtiene todos los roles disponibles.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RoleDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RoleDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RoleDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Crea un nuevo rol en el sistema.",
+        "requestBody": {
+          "description": "Datos del rol a crear.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Roles/{id}": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Obtiene un rol específico por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Identificador del rol.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Actualiza un rol existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID del rol a actualizar.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del rol.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Elimina un rol por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID del rol a eliminar.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Trailers": {
+      "get": {
+        "tags": [
+          "Trailers"
+        ],
+        "summary": "Obtiene la lista de todos los remolques disponibles.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TrailerDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TrailerDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TrailerDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Trailers"
+        ],
+        "summary": "Crea un nuevo remolque.",
+        "requestBody": {
+          "description": "Datos del remolque a crear.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrailerDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrailerDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrailerDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Trailers/{id}": {
+      "get": {
+        "tags": [
+          "Trailers"
+        ],
+        "summary": "Obtiene un remolque específico por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Identificador del remolque.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrailerDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrailerDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrailerDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Trailers"
+        ],
+        "summary": "Actualiza un remolque existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID del remolque a actualizar.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del remolque.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrailerDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrailerDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrailerDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Trailers"
+        ],
+        "summary": "Elimina un remolque por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID del remolque a eliminar.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/UserRoles": {
+      "get": {
+        "tags": [
+          "UserRoles"
+        ],
+        "summary": "Obtiene todos los roles de usuario.",
+        "description": "Este endpoint devuelve una lista con todos los roles de usuario almacenados en el sistema.",
+        "responses": {
+          "200": {
+            "description": "Devuelve la lista de roles de usuario",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserRoleDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserRoleDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserRoleDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno del servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "UserRoles"
+        ],
+        "summary": "Crea un nuevo rol de usuario.",
+        "description": "Este endpoint permite crear un nuevo rol de usuario proporcionando los datos necesarios.",
+        "requestBody": {
+          "description": "Datos del nuevo rol de usuario a crear",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRoleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRoleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRoleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Rol de usuario creado exitosamente"
+          },
+          "400": {
+            "description": "Datos incorrectos en la solicitud"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "UserRoles"
+        ],
+        "summary": "Elimina un rol de usuario.",
+        "description": "Este endpoint elimina un rol de usuario proporcionando los detalles del rol que se desea eliminar.",
+        "requestBody": {
+          "description": "Datos del rol de usuario a eliminar",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRoleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRoleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRoleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Rol de usuario eliminado exitosamente"
+          },
+          "400": {
+            "description": "Datos incorrectos en la solicitud"
+          }
+        }
+      }
+    },
+    "/api/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Obtiene todos los usuarios.",
+        "description": "Este endpoint devuelve una lista de todos los usuarios almacenados en el sistema.",
+        "responses": {
+          "200": {
+            "description": "Devuelve la lista de usuarios",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno del servidor"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Obtiene un usuario por su ID.",
+        "description": "Este endpoint devuelve los detalles de un usuario específico por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del usuario a buscar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Devuelve los detalles del usuario",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Si no se encuentra el usuario con el ID proporcionado"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Actualiza los datos de un usuario.",
+        "description": "Este endpoint permite actualizar los detalles de un usuario. El ID del usuario en la URL debe coincidir con el ID en los datos del usuario.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del usuario a actualizar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Los nuevos datos del usuario",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Usuario actualizado exitosamente"
+          },
+          "400": {
+            "description": "ID de usuario no coincide con el proporcionado"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Elimina un usuario por su ID.",
+        "description": "Este endpoint elimina un usuario del sistema utilizando su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del usuario a eliminar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Usuario eliminado exitosamente"
+          }
+        }
+      }
+    },
+    "/api/Users/createUser": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Crea un nuevo usuario en el sistema.",
+        "description": "Este endpoint permite crear un nuevo usuario proporcionando los datos necesarios.\r\nLa contraseña se recibe sin encriptar y es hasheada antes de ser almacenada.",
+        "requestBody": {
+          "description": "Datos del nuevo usuario a crear",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Usuario creado exitosamente"
+          },
+          "400": {
+            "description": "Datos incorrectos en la solicitud"
+          }
+        }
+      }
+    },
+    "/api/Users/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Inicia sesión de un usuario.",
+        "description": "Este endpoint valida las credenciales del usuario y genera un token JWT si el login es exitoso.",
+        "requestBody": {
+          "description": "Credenciales del usuario para el login",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login exitoso, retorna un token JWT"
+          },
+          "400": {
+            "description": "Credenciales incorrectas"
+          }
+        }
+      }
+    },
+    "/api/Vehicles": {
+      "get": {
+        "tags": [
+          "Vehicles"
+        ],
+        "summary": "Obtiene todos los vehículos.",
+        "description": "Este endpoint devuelve una lista de todos los vehículos almacenados en el sistema.",
+        "responses": {
+          "200": {
+            "description": "Devuelve la lista de vehículos",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno del servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Vehicles"
+        ],
+        "summary": "Crea un nuevo vehículo.",
+        "description": "Este endpoint permite crear un nuevo vehículo proporcionando los datos necesarios.",
+        "requestBody": {
+          "description": "Datos del nuevo vehículo a crear",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Vehículo creado exitosamente"
+          },
+          "400": {
+            "description": "Datos incorrectos en la solicitud"
+          }
+        }
+      }
+    },
+    "/api/Vehicles/{id}": {
+      "get": {
+        "tags": [
+          "Vehicles"
+        ],
+        "summary": "Obtiene un vehículo por su ID.",
+        "description": "Este endpoint devuelve los detalles de un vehículo específico por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del vehículo a buscar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Devuelve los detalles del vehículo",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Si no se encuentra el vehículo con el ID proporcionado"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Vehicles"
+        ],
+        "summary": "Actualiza un vehículo existente.",
+        "description": "Este endpoint permite actualizar los detalles de un vehículo existente. El ID del vehículo en la URL debe coincidir con el ID en los datos del vehículo.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del vehículo a actualizar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Los nuevos datos del vehículo",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Vehículo actualizado exitosamente"
+          },
+          "400": {
+            "description": "ID de vehículo no coincide con el proporcionado"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Vehicles"
+        ],
+        "summary": "Elimina un vehículo por su ID.",
+        "description": "Este endpoint elimina un vehículo del sistema utilizando su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del vehículo a eliminar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Vehículo eliminado exitosamente"
+          }
+        }
+      }
+    },
+    "/api/VehiclesTrailer": {
+      "get": {
+        "tags": [
+          "VehiclesTrailer"
+        ],
+        "summary": "Obtiene todos los remolques de vehículos.",
+        "description": "Este endpoint devuelve una lista de todos los remolques de vehículos almacenados en el sistema.",
+        "responses": {
+          "200": {
+            "description": "Devuelve la lista de remolques de vehículos",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleTrailerDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleTrailerDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleTrailerDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno del servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "VehiclesTrailer"
+        ],
+        "summary": "Crea un nuevo remolque de vehículo.",
+        "description": "Este endpoint permite crear un nuevo remolque de vehículo proporcionando los datos necesarios.",
+        "requestBody": {
+          "description": "Datos del nuevo remolque de vehículo a crear",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTrailerDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTrailerDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTrailerDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Remolque de vehículo creado exitosamente"
+          },
+          "400": {
+            "description": "Datos incorrectos en la solicitud"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "VehiclesTrailer"
+        ],
+        "summary": "Actualiza un remolque de vehículo existente.",
+        "description": "Este endpoint permite actualizar los detalles de un remolque de vehículo existente.",
+        "requestBody": {
+          "description": "Los nuevos datos del remolque de vehículo",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTrailerDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTrailerDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTrailerDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Remolque de vehículo actualizado exitosamente"
+          },
+          "400": {
+            "description": "Datos incorrectos o errores al intentar actualizar el remolque"
+          }
+        }
+      }
+    },
+    "/api/VehiclesTrailer/{id}": {
+      "get": {
+        "tags": [
+          "VehiclesTrailer"
+        ],
+        "summary": "Obtiene un remolque de vehículo por su ID.",
+        "description": "Este endpoint devuelve los detalles de un remolque de vehículo específico por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del remolque de vehículo a buscar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Devuelve los detalles del remolque de vehículo",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTrailerDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTrailerDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTrailerDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Si no se encuentra el remolque con el ID proporcionado"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VehiclesTrailer"
+        ],
+        "summary": "Elimina un remolque de vehículo por su ID.",
+        "description": "Este endpoint elimina un remolque de vehículo del sistema utilizando su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del remolque de vehículo a eliminar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Remolque de vehículo eliminado exitosamente"
+          },
+          "404": {
+            "description": "Si no se encuentra el remolque con el ID proporcionado"
+          }
+        }
+      }
+    },
+    "/api/VehiclesType": {
+      "get": {
+        "tags": [
+          "VehiclesType"
+        ],
+        "summary": "Obtiene todos los tipos de vehículos.",
+        "description": "Este endpoint devuelve una lista de todos los tipos de vehículos almacenados en el sistema.",
+        "responses": {
+          "200": {
+            "description": "Devuelve la lista de tipos de vehículos",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleTypeDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleTypeDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VehicleTypeDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno del servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "VehiclesType"
+        ],
+        "summary": "Crea un nuevo tipo de vehículo.",
+        "description": "Este endpoint permite crear un nuevo tipo de vehículo proporcionando los datos necesarios.",
+        "requestBody": {
+          "description": "Datos del nuevo tipo de vehículo a crear",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Tipo de vehículo creado exitosamente"
+          },
+          "400": {
+            "description": "Datos incorrectos en la solicitud"
+          }
+        }
+      }
+    },
+    "/api/VehiclesType/{id}": {
+      "get": {
+        "tags": [
+          "VehiclesType"
+        ],
+        "summary": "Obtiene un tipo de vehículo por su ID.",
+        "description": "Este endpoint devuelve los detalles de un tipo de vehículo específico por su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del tipo de vehículo a buscar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Devuelve los detalles del tipo de vehículo",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTypeDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTypeDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTypeDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Si no se encuentra el tipo de vehículo con el ID proporcionado"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "VehiclesType"
+        ],
+        "summary": "Actualiza un tipo de vehículo existente.",
+        "description": "Este endpoint permite actualizar los detalles de un tipo de vehículo existente. El ID del tipo de vehículo en la URL debe coincidir con el ID en los datos del tipo de vehículo.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del tipo de vehículo a actualizar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Los nuevos datos del tipo de vehículo",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleTypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Tipo de vehículo actualizado exitosamente"
+          },
+          "400": {
+            "description": "ID de tipo de vehículo no coincide con el proporcionado"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VehiclesType"
+        ],
+        "summary": "Elimina un tipo de vehículo por su ID.",
+        "description": "Este endpoint elimina un tipo de vehículo del sistema utilizando su ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "El ID del tipo de vehículo a eliminar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Tipo de vehículo eliminado exitosamente"
+          },
+          "404": {
+            "description": "Si no se encuentra el tipo de vehículo con el ID proporcionado"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RoleDTO": {
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrailerDTO": {
+        "type": "object",
+        "properties": {
+          "trailerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "maxWeight": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDTO": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserRoleDTO": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehicleDTO": {
+        "type": "object",
+        "properties": {
+          "vehicleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehicleTrailerDTO": {
+        "type": "object",
+        "properties": {
+          "vehicleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trailerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "begDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehicleTypeDTO": {
+        "type": "object",
+        "properties": {
+          "vehicleTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
