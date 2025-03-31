@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "9tw8OGSotTY/1fkRrT5XutZGx7gPbBrrwVeIL5w1KqM=",
+  "Hash": "DBaot3kkUGnuPNuH7dIIZKGqyXRaI0Sa6zvcfzOmqyE=",
   "Source": "OGA.API",
   "BasePath": "_content/OGA.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

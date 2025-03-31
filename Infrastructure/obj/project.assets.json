@@ -4813,23 +4813,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Juan Mary\\.nuget\\packages\\": {},
+    "C:\\Users\\Megasport\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Juan Mary\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Megasport\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Juan Mary\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Megasport\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4838,14 +4838,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Domain\\Domain.csproj"
+            "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Domain\\Domain.csproj"
             }
           }
         }
@@ -4859,8 +4860,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4901,7 +4901,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

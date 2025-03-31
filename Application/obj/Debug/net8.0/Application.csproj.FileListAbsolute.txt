@@ -16,3 +16,21 @@ C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\bin\Debug\net8.0\Application.deps.json
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\bin\Debug\net8.0\Application.dll
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\bin\Debug\net8.0\Application.pdb
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\bin\Debug\net8.0\Domain.dll
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\bin\Debug\net8.0\Domain.pdb
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.sourcelink.json
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.dll
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\refint\Application.dll
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\Application.pdb
+C:\Users\Megasport\source\repos\BackWeb.API\OGA-BACK\Application\obj\Debug\net8.0\ref\Application.dll

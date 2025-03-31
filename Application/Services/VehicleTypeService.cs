@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.DTOs;
+﻿using Application.DTOs;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
 using Domain.Interfaces;
-using Infrastructure.Repositories;
 
 namespace Application.Services
 {
@@ -21,42 +15,82 @@ namespace Application.Services
         {
             _vehicleTypeRepository = vehicleTypeRepository;
             _mapper = mapper;
-
         }
+
         public async Task AddVehicleTypeAsync(VehicleTypeDTO vehicleTypeDto)
         {
-            var vehicleType = _mapper.Map<VehicleType>(vehicleTypeDto);
-            await _vehicleTypeRepository.AddAsync(vehicleType);
-            await _vehicleTypeRepository.SaveChangesAsync();
+            try
+            {
+                var vehicleType = _mapper.Map<VehicleType>(vehicleTypeDto);
+                await _vehicleTypeRepository.AddAsync(vehicleType);
+                await _vehicleTypeRepository.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al agregar VehicleType: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task DeleteVehicleTypeAsync(int id)
         {
-            var vehicleType = await _vehicleTypeRepository.GetByIdAsync(id);
-            if (vehicleType != null)
+            try
             {
-                _vehicleTypeRepository.Delete(vehicleType);
-                await _vehicleTypeRepository.SaveChangesAsync();
+                var vehicleType = await _vehicleTypeRepository.GetByIdAsync(id);
+                if (vehicleType != null)
+                {
+                    _vehicleTypeRepository.Delete(vehicleType);
+                    await _vehicleTypeRepository.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al eliminar VehicleType: {ex.Message}");
+                throw;
             }
         }
 
         public async Task<IEnumerable<VehicleTypeDTO>> GetAllVehicleTypeAsync()
         {
-            var vehicleType = await _vehicleTypeRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<VehicleTypeDTO>>(vehicleType);
+            try
+            {
+                var vehicleType = await _vehicleTypeRepository.GetAllAsync();
+                return _mapper.Map<IEnumerable<VehicleTypeDTO>>(vehicleType);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener todos los VehicleTypes: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task<VehicleTypeDTO?> GetVehicleTypeByIdAsync(int id)
         {
-            var vehicleType = await _vehicleTypeRepository.GetByIdAsync(id);
-            return vehicleType != null ? _mapper.Map<VehicleTypeDTO>(vehicleType) : null;
+            try
+            {
+                var vehicleType = await _vehicleTypeRepository.GetByIdAsync(id);
+                return vehicleType != null ? _mapper.Map<VehicleTypeDTO>(vehicleType) : null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener VehicleType por ID: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task UpdateVehicleTypeAsync(VehicleTypeDTO VehicleTypeDTO)
         {
-            var vehicleType = _mapper.Map<VehicleType>(VehicleTypeDTO);
-            _vehicleTypeRepository.Update(vehicleType);
-            await _vehicleTypeRepository.SaveChangesAsync();
+            try
+            {
+                var vehicleType = _mapper.Map<VehicleType>(VehicleTypeDTO);
+                _vehicleTypeRepository.Update(vehicleType);
+                await _vehicleTypeRepository.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al actualizar VehicleType: {ex.Message}");
+                throw;
+            }
         }
     }
 }

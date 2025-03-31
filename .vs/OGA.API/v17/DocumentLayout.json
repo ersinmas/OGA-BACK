@@ -1,29 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\",
+  "WorkspaceRootPath": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\oga.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|solutionrelative:oga.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\application\\services\\vehicletypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\vehicletypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\application\\services\\vehicletrailerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\vehicletrailerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\application\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\oga.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\application\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\application\\services\\trailerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\trailerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\application\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\oga.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|solutionrelative:oga.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\oga.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|solutionrelative:oga.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\oga.api\\oga.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\oga.api\\oga.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|solutionrelative:oga.api\\oga.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\oga.api\\controllers\\vehicletypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\oga.api\\controllers\\vehicletypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|solutionrelative:oga.api\\controllers\\vehicletypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\oga.api\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\megasport\\source\\repos\\backweb.api\\oga-back\\oga.api\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|solutionrelative:oga.api\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,11 +66,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "VehicleTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\VehicleTypeService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\VehicleTypeService.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\VehicleTypeService.cs",
+              "RelativeToolTip": "Application\\Services\\VehicleTypeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:48:54.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleTrailerService.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\VehicleTrailerService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\VehicleTrailerService.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\VehicleTrailerService.cs",
+              "RelativeToolTip": "Application\\Services\\VehicleTrailerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:44:14.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\VehicleService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\VehicleService.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\VehicleService.cs",
+              "RelativeToolTip": "Application\\Services\\VehicleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:42:53.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\UserRoleService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UserRoleService.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\UserRoleService.cs",
+              "RelativeToolTip": "Application\\Services\\UserRoleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:40:37.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TrailerService.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\TrailerService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\TrailerService.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\TrailerService.cs",
+              "RelativeToolTip": "Application\\Services\\TrailerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:38:31.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\RoleService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\RoleService.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\RoleService.cs",
+              "RelativeToolTip": "Application\\Services\\RoleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:37:00.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "OGA.API.csproj",
-              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\OGA.API.csproj",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\OGA.API.csproj",
               "RelativeDocumentMoniker": "OGA.API\\OGA.API.csproj",
-              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\OGA.API.csproj",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\OGA.API.csproj",
               "RelativeToolTip": "OGA.API\\OGA.API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -54,11 +156,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\appsettings.json",
               "RelativeDocumentMoniker": "OGA.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\appsettings.json",
               "RelativeToolTip": "OGA.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -66,36 +168,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Application\\Services\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\Application\\Services\\UserService.cs",
               "RelativeToolTip": "Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAowGEAAABSAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T10:27:49.413Z"
+              "WhenOpened": "2025-03-30T10:27:49.413Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\Program.cs",
               "RelativeDocumentMoniker": "OGA.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\Program.cs",
               "RelativeToolTip": "OGA.API\\Program.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGYAAAAJAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T08:58:09.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "VehicleTypeController.cs",
-              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Controllers\\VehicleTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\Controllers\\VehicleTypeController.cs",
               "RelativeDocumentMoniker": "OGA.API\\Controllers\\VehicleTypeController.cs",
-              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Controllers\\VehicleTypeController.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\Controllers\\VehicleTypeController.cs",
               "RelativeToolTip": "OGA.API\\Controllers\\VehicleTypeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -103,11 +206,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "VehiclesController.cs",
-              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Controllers\\VehiclesController.cs",
+              "DocumentMoniker": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\Controllers\\VehiclesController.cs",
               "RelativeDocumentMoniker": "OGA.API\\Controllers\\VehiclesController.cs",
-              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Controllers\\VehiclesController.cs",
+              "ToolTip": "C:\\Users\\Megasport\\source\\repos\\BackWeb.API\\OGA-BACK\\OGA.API\\Controllers\\VehiclesController.cs",
               "RelativeToolTip": "OGA.API\\Controllers\\VehiclesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

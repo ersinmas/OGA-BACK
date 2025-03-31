@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.DTOs;
+﻿using Application.DTOs;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
@@ -11,7 +6,7 @@ using Domain.Interfaces;
 
 namespace Application.Services
 {
-    public class UserRoleService:IUserRoleService
+    public class UserRoleService : IUserRoleService
     {
         private readonly IUserRoleRepository _userRoleRepository;
 
@@ -25,43 +20,83 @@ namespace Application.Services
 
         public async Task<IEnumerable<UserRoleDTO>> GetAllUserRolesAsync()
         {
-            var userRole = await _userRoleRepository.GetAllAsync();
-            var filteredUserRoles = userRole.Where(t => t.Enabled); //Filtrar solo los que tienen Enabled = true
-            return _mapper.Map<IEnumerable<UserRoleDTO>>(filteredUserRoles);
+            try
+            {
+                var userRole = await _userRoleRepository.GetAllAsync();
+                var filteredUserRoles = userRole.Where(t => t.Enabled); 
+                return _mapper.Map<IEnumerable<UserRoleDTO>>(filteredUserRoles);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al obtener los roles de usuario", ex);
+            }
         }
 
         public async Task<UserRoleDTO?> GetUserRoleByIdAsync(int id)
         {
-            throw new NotImplementedException();
-
+            try
+            {
+                throw new NotImplementedException();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al obtener el rol de usuario por ID", ex);
+            }
         }
 
         public async Task AddUserRoleAsync(UserRoleDTO userRoleDto)
         {
-            var userRole = _mapper.Map<UserRole>(userRoleDto);
-            await _userRoleRepository.AddAsync(userRole);
-            await _userRoleRepository.SaveChangesAsync();
+            try
+            {
+                var userRole = _mapper.Map<UserRole>(userRoleDto);
+                await _userRoleRepository.AddAsync(userRole);
+                await _userRoleRepository.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al agregar el rol de usuario", ex);
+            }
         }
 
         public async Task UpdateUserRoleAsync(UserRoleDTO userRoleDto)
         {
-            throw new NotImplementedException();
-
+            try
+            {
+                throw new NotImplementedException();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al actualizar el rol de usuario", ex);
+            }
         }
 
         public async Task DeleteUserRoleAsync(UserRoleDTO userRoleDto)
         {
-            var userRole = _mapper.Map<UserRole>(userRoleDto);
-            if (userRole != null)
+            try
             {
-                _userRoleRepository.Delete(userRole);
-                await _userRoleRepository.SaveChangesAsync();
+                var userRole = _mapper.Map<UserRole>(userRoleDto);
+                if (userRole != null)
+                {
+                    _userRoleRepository.Delete(userRole);
+                    await _userRoleRepository.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al eliminar el rol de usuario", ex);
             }
         }
 
         public Task DeleteUserRoleAsync(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                throw new NotImplementedException();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al eliminar el rol de usuario por ID", ex);
+            }
         }
     }
 }
