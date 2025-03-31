@@ -3,6 +3,7 @@ using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OGA.API.Controllers
 {
@@ -11,7 +12,6 @@ namespace OGA.API.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize] // 🔒 Descomentar para proteger con autenticación JWT
     public class RolesController : ControllerBase
     {
         private readonly IRoleService _roleService;

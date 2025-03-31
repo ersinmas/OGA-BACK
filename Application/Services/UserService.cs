@@ -86,31 +86,36 @@ namespace Application.Services
             return userDTObyEmail;
         }
 
-        public async Task<string> GenerateJwtToken(string username)
+        public async Task<string> GenerateJwtToken(string email)
         {
+            
             var jwtSettings = _config.GetSection("JwtSettings");
             var secretKey = jwtSettings["SecretKey"];
             var issuer = jwtSettings["Issuer"];
             var audience = jwtSettings["Audience"];
 
+            // Crear la clave de seguridad
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+            // Añadir claims (puedes agregar más si es necesario)
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, username),
-                new Claim(ClaimTypes.Role, "Admin") 
+                new Claim(ClaimTypes.Name, email),  // Verifica que el "username" sea el correcto
             };
 
+            // Crear el token JWT
             var token = new JwtSecurityToken(
                 issuer: issuer,
                 audience: audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
+                expires: DateTime.UtcNow.AddHours(1),  // Duración del token: 1 hora
                 signingCredentials: credentials
             );
 
+            // Retornar el token en formato de cadena
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
     }
 }

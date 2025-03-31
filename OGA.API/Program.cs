@@ -53,7 +53,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularClient",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200") 
+            policy.WithOrigins("http://localhost:4200")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
@@ -69,7 +69,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
-{   
+{
 
     c.SwaggerDoc("v1", new OpenApiInfo
     {
@@ -130,11 +130,11 @@ if (app.Environment.IsDevelopment())
 
 }
 
-app.UseCors("AllowAngularClient"); 
+app.UseCors("AllowAngularClient");
 
 app.UseHttpsRedirection();
 
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,12 +1,12 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace OGA.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize] // Protegemos con JWT
     public class UserRolesController : ControllerBase
     {
         private readonly IUserRoleService _userRoleService;

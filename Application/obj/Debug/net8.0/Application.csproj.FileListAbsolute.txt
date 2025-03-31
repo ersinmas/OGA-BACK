@@ -10,6 +10,7 @@ C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application.sourcelink.json
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\Application.dll
 C:\Users\Juan Mary\source\repos\OGA.API\Application\obj\Debug\net8.0\refint\Application.dll

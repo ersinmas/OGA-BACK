@@ -33,7 +33,8 @@ namespace Application.Services
         public async Task<IEnumerable<VehicleTrailerDTO>> GetAllVehicleTrailersAsync()
         {
             var vehicleTrailers = await _vehicleTrailerRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<VehicleTrailerDTO>>(vehicleTrailers);
+            var enabledVehicleTrailers = vehicleTrailers.Where(vt => vt.Enabled);
+            return _mapper.Map<IEnumerable<VehicleTrailerDTO>>(enabledVehicleTrailers);
         }
 
         public async Task AddVehicleTrailerAsync(VehicleTrailerDTO vehicleTrailerDto)
@@ -101,6 +102,11 @@ namespace Application.Services
             await this.DeleteVehicleTrailerAsync(vehicleTrailerNew); //eliminamos el actual
 
             vehicleTrailerNew.EndAsig(); //cambiamos la fecha de fin por la de ahora
+            vehicleTrailerNew.Enabled = false;
+            var trailer = await _trailerRepository.GetByIdAsync(vehicleTrailerNew.TrailerId);
+            trailer.Enabled = true;
+             _trailerRepository.Update(trailer);
+            await _trailerRepository.SaveChangesAsync();
             await _vehicleTrailerRepository.AddAsync(vehicleTrailerNew); // creamos de nuevo la relacion 
             await _vehicleTrailerRepository.SaveChangesAsync();
         }

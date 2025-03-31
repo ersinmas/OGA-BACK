@@ -88,25 +88,31 @@ namespace OGA.API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult> Login([FromBody] UserDTO userDto)
         {
+            // Buscar al usuario
             var user = await _userService.SearchUser(userDto);
 
+            // Verificar si el usuario existe
+            if (user == null)
+            {
+                return Unauthorized(new { message = "Usuario incorrecto" });
+            }
+
+            // Verificar la contraseña
             var passHash = new PasswordHasher<string>();
             var verificationResult = passHash.VerifyHashedPassword(user.Email, user.PasswordHash, userDto.PasswordHash);
 
-            if (user == null)
-            {
-                throw new InvalidOperationException("Usuario incorrecto");
-            }
             if (verificationResult == PasswordVerificationResult.Success)
             {
-                var token = await _userService.GenerateJwtToken("dd");
+                // Generar el token con el email del usuario
+                var token = await _userService.GenerateJwtToken(user.Email);
                 return Ok(new { token });
             }
             else
             {
-                throw new InvalidOperationException("Contraseña incorrecta");
+                return Unauthorized(new { message = "Contraseña incorrecta" });
             }
         }
+
 
         /// <summary>
         /// Actualiza los datos de un usuario.

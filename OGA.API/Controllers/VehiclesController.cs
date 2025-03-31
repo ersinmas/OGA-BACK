@@ -7,7 +7,8 @@ namespace OGA.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    // [Authorize] // Protegemos con JWT
+    [Authorize]
+
     public class VehiclesController : ControllerBase
     {
         private readonly IVehicleService _vehicleService;

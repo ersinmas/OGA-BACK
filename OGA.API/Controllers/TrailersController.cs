@@ -1,5 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
+using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,7 +14,6 @@ namespace OGA.API.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize] // 🔒 Descomentar para proteger con JWT
     public class TrailersController : ControllerBase
     {
         private readonly ITrailerService _trailerService;
@@ -84,25 +84,11 @@ namespace OGA.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] TrailerDTO trailerDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             if (id != trailerDto.TrailerId)
-                return BadRequest(new { message = "El ID proporcionado no coincide con el del remolque." });
+                return BadRequest("ID mismatch");
 
-            var existingTrailer = await _trailerService.GetTrailerByIdAsync(id);
-            if (existingTrailer == null)
-                return NotFound(new { message = "Remolque no encontrado." });
-
-            try
-            {
-                await _trailerService.UpdateTrailerAsync(trailerDto);
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { message = "Error al actualizar el remolque.", details = ex.Message });
-            }
+            await _trailerService.UpdateTrailerAsync(trailerDto);
+            return NoContent();
         }
 
         /// <summary>
