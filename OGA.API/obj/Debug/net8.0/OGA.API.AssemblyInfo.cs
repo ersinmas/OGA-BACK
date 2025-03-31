@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OGA.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ac0bcbe6b60bf6c7768d9fc931fba79b8d70a49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+420f0980120605f05b8aaa9239740c86c21e685f")]
 [assembly: System.Reflection.AssemblyProductAttribute("OGA.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OGA.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
