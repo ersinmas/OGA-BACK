@@ -566,56 +566,6 @@
           }
         }
       },
-      "put": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Actualiza los datos de un usuario.",
-        "description": "Este endpoint permite actualizar los detalles de un usuario. El ID del usuario en la URL debe coincidir con el ID en los datos del usuario.",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "El ID del usuario a actualizar",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Los nuevos datos del usuario",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "204": {
-            "description": "Usuario actualizado exitosamente"
-          },
-          "400": {
-            "description": "ID de usuario no coincide con el proporcionado"
-          }
-        }
-      },
       "delete": {
         "tags": [
           "Users"
@@ -1083,36 +1033,6 @@
                 }
               }
             }
-          },
-          "404": {
-            "description": "Si no se encuentra el remolque con el ID proporcionado"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "VehiclesTrailer"
-        ],
-        "summary": "Elimina un remolque de vehículo por su ID.",
-        "description": "Este endpoint elimina un remolque de vehículo del sistema utilizando su ID.",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "El ID del remolque de vehículo a eliminar",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "204": {
-            "description": "Remolque de vehículo eliminado exitosamente"
           },
           "404": {
             "description": "Si no se encuentra el remolque con el ID proporcionado"

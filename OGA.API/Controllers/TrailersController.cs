@@ -14,6 +14,7 @@ namespace OGA.API.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TrailersController : ControllerBase
     {
         private readonly ITrailerService _trailerService;

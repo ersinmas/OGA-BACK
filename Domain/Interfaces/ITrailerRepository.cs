@@ -11,6 +11,5 @@ namespace Domain.Interfaces
     public interface ITrailerRepository : IGenericRepository<Trailer>
     {
 
-        Task<IEnumerable<Trailer>> GetTrailersByMaxWeightAsync(double maxWeight);
     }
 }

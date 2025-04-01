@@ -7,6 +7,7 @@ namespace OGA.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserRolesController : ControllerBase
     {
         private readonly IUserRoleService _userRoleService;

@@ -114,26 +114,7 @@ namespace OGA.API.Controllers
         }
 
 
-        /// <summary>
-        /// Actualiza los datos de un usuario.
-        /// </summary>
-        /// <param name="id">El ID del usuario a actualizar</param>
-        /// <param name="userDto">Los nuevos datos del usuario</param>
-        /// <remarks>
-        /// Este endpoint permite actualizar los detalles de un usuario. El ID del usuario en la URL debe coincidir con el ID en los datos del usuario.
-        /// </remarks>
-        /// <returns>Resultado de la operación</returns>
-        /// <response code="204">Usuario actualizado exitosamente</response>
-        /// <response code="400">ID de usuario no coincide con el proporcionado</response>
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] UserDTO userDto)
-        {
-            if (id != userDto.UserId)
-                return BadRequest("ID mismatch");
-
-            await _userService.UpdateUserAsync(userDto);
-            return NoContent();
-        }
+        
 
         /// <summary>
         /// Elimina un usuario por su ID.

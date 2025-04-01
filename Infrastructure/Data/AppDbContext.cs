@@ -69,7 +69,8 @@ namespace Infrastructure.Data
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            var usuarioActual = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "Sistema";
+            var usuarioActual = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.Name)?.Value ?? "Sistema";
+
 
             foreach (var entry in ChangeTracker.Entries<BaseAuditable>())
             {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.API", "OGA.API\OGA.API.csproj", "{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{521D8F12-5FD7-4CE8-AA21-898F48087A30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{90DC530E-7640-49AA-A24A-D9462BF7A945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{78991EA9-18AC-4985-9058-D4C4FCD11663}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{90DC530E-7640-49AA-A24A-D9462BF7A945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90DC530E-7640-49AA-A24A-D9462BF7A945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90DC530E-7640-49AA-A24A-D9462BF7A945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78991EA9-18AC-4985-9058-D4C4FCD11663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78991EA9-18AC-4985-9058-D4C4FCD11663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78991EA9-18AC-4985-9058-D4C4FCD11663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78991EA9-18AC-4985-9058-D4C4FCD11663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

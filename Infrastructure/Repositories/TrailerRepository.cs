@@ -14,9 +14,6 @@ namespace Infrastructure.Repositories
     {
         public TrailerRepository(AppDbContext context) : base(context) { }
 
-        public async Task<IEnumerable<Trailer>> GetTrailersByMaxWeightAsync(double maxWeight)
-        {
-            return await _dbSet.Where(t => t.MaxWeight <= maxWeight).ToListAsync();
-        }
+
     }
 }

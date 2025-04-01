@@ -101,21 +101,6 @@ namespace OGA.API.Controllers
             }
         }
 
-        /// <summary>
-        /// Elimina un remolque de vehículo por su ID.
-        /// </summary>
-        /// <param name="id">El ID del remolque de vehículo a eliminar</param>
-        /// <remarks>
-        /// Este endpoint elimina un remolque de vehículo del sistema utilizando su ID.
-        /// </remarks>
-        /// <returns>Resultado de la operación</returns>
-        /// <response code="204">Remolque de vehículo eliminado exitosamente</response>
-        /// <response code="404">Si no se encuentra el remolque con el ID proporcionado</response>
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            await _vehicleTrailerService.DeleteVehicleTrailerAsync(id);
-            return NoContent();
-        }
+        
     }
 }

@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\oga.api\\controllers\\vehicletrailercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD8D91C-E8B4-4440-87D6-8F0744AB2329}|OGA.API\\OGA.API.csproj|solutionrelative:oga.api\\controllers\\vehicletrailercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|c:\\users\\juan mary\\source\\repos\\oga.api\\application\\services\\vehicletrailerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521D8F12-5FD7-4CE8-AA21-898F48087A30}|Application\\Application.csproj|solutionrelative:application\\services\\vehicletrailerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleTrailerService.cs",
+              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Application\\Services\\VehicleTrailerService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\VehicleTrailerService.cs",
+              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\Application\\Services\\VehicleTrailerService.cs",
+              "RelativeToolTip": "Application\\Services\\VehicleTrailerService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAtwD4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:09:24.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VehicleTrailerController.cs",
+              "DocumentMoniker": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Controllers\\VehicleTrailerController.cs",
+              "RelativeDocumentMoniker": "OGA.API\\Controllers\\VehicleTrailerController.cs",
+              "ToolTip": "C:\\Users\\Juan Mary\\source\\repos\\OGA.API\\OGA.API\\Controllers\\VehicleTrailerController.cs",
+              "RelativeToolTip": "OGA.API\\Controllers\\VehicleTrailerController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowGUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:11:02.661Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

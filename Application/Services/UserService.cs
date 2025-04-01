@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 using Application.DTOs;
 using Application.Interfaces;
 using AutoMapper;
@@ -15,107 +11,146 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Application.Services
 {
-    public class UserService:IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 
         private readonly IMapper _mapper;
         private readonly IConfiguration _config;
 
-
-
         public UserService(IUserRepository userRepository, IMapper mapper, IConfiguration config)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _config = config;
-
         }
 
         public async Task<IEnumerable<UserDTO>> GetAllUsersAsync()
         {
-            var user = await _userRepository.GetAllAsync();
-            var filteredUsers = user.Where(t => t.Enabled); //Filtrar solo los que tienen Enabled = true
-            return _mapper.Map<IEnumerable<UserDTO>>(filteredUsers);
+            try
+            {
+                var user = await _userRepository.GetAllAsync();
+                var filteredUsers = user.Where(t => t.Enabled); 
+                return _mapper.Map<IEnumerable<UserDTO>>(filteredUsers);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al obtener los usuarios", ex);
+            }
         }
 
         public async Task<UserDTO?> GetUserByIdAsync(int id)
         {
-
-            var user = await _userRepository.GetByIdAsync(id);
-            return user != null ? _mapper.Map<UserDTO>(user) : null;
+            try
+            {
+                var user = await _userRepository.GetByIdAsync(id);
+                return user != null ? _mapper.Map<UserDTO>(user) : null;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al obtener el usuario por ID", ex);
+            }
         }
 
         public async Task AddUserAsync(UserDTO userDto)
         {
-            var users = await this.GetAllUsersAsync();
-            foreach (var u in users)
+            try
             {
-                if (u.Email == userDto.Email)
-                { 
-                    throw new InvalidOperationException("El correo electrónico ya está registrado.");
+                var users = await this.GetAllUsersAsync();
+                foreach (var u in users)
+                {
+                    if (u.Email == userDto.Email)
+                    {
+                        throw new InvalidOperationException("El correo electrónico ya está registrado.");
+                    }
                 }
 
+                var user = _mapper.Map<User>(userDto);
+                await _userRepository.AddAsync(user);
+                await _userRepository.SaveChangesAsync();
             }
-            var user = _mapper.Map<User>(userDto);
-            await _userRepository.AddAsync(user);
-            await _userRepository.SaveChangesAsync();
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al agregar el usuario", ex);
+            }
         }
 
         public async Task UpdateUserAsync(UserDTO userDto)
         {
-            var user = _mapper.Map<User>(userDto);
-            _userRepository.Update(user);
-            await _userRepository.SaveChangesAsync();
+            try
+            {
+                var user = _mapper.Map<User>(userDto);
+                _userRepository.Update(user);
+                await _userRepository.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al actualizar el usuario", ex);
+            }
         }
 
         public async Task DeleteUserAsync(int id)
         {
-            var user = await _userRepository.GetByIdAsync(id);
-            if (user != null)
+            try
             {
-                _userRepository.Delete(user);
-                await _userRepository.SaveChangesAsync();
+                var user = await _userRepository.GetByIdAsync(id);
+                if (user != null)
+                {
+                    _userRepository.Delete(user);
+                    await _userRepository.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al eliminar el usuario", ex);
             }
         }
 
         public async Task<User> SearchUser(UserDTO userDto)
         {
-            var user = _mapper.Map<User>(userDto);
-            var userDTObyEmail = await _userRepository.GetByEmail(user);
-            return userDTObyEmail;
+            try
+            {
+                var user = _mapper.Map<User>(userDto);
+                var userDTObyEmail = await _userRepository.GetByEmail(user);
+                return userDTObyEmail;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al buscar el usuario por correo", ex);
+            }
         }
 
         public async Task<string> GenerateJwtToken(string email)
         {
-            
-            var jwtSettings = _config.GetSection("JwtSettings");
-            var secretKey = jwtSettings["SecretKey"];
-            var issuer = jwtSettings["Issuer"];
-            var audience = jwtSettings["Audience"];
-
-            // Crear la clave de seguridad
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            // Añadir claims (puedes agregar más si es necesario)
-            var claims = new[]
+            try
             {
-                new Claim(ClaimTypes.Name, email),  // Verifica que el "username" sea el correcto
-            };
+                var jwtSettings = _config.GetSection("JwtSettings");
+                var secretKey = jwtSettings["SecretKey"];
+                var issuer = jwtSettings["Issuer"];
+                var audience = jwtSettings["Audience"];
 
-            // Crear el token JWT
-            var token = new JwtSecurityToken(
-                issuer: issuer,
-                audience: audience,
-                claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),  // Duración del token: 1 hora
-                signingCredentials: credentials
-            );
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+                var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            // Retornar el token en formato de cadena
-            return new JwtSecurityTokenHandler().WriteToken(token);
+                var claims = new[]
+                {
+                    new Claim(ClaimTypes.Name, email), 
+                };
+
+                var token = new JwtSecurityToken(
+                    issuer: issuer,
+                    audience: audience,
+                    claims: claims,
+                    expires: DateTime.UtcNow.AddHours(1),  
+                    signingCredentials: credentials
+                );
+
+                return new JwtSecurityTokenHandler().WriteToken(token);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al generar el token JWT", ex);
+            }
         }
-
     }
 }
